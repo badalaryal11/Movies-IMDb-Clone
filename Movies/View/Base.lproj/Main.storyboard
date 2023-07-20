@@ -259,6 +259,9 @@
                             </collectionViewCell>
                         </cells>
                     </collectionView>
+                    <connections>
+                        <outlet property="movieCollectionView" destination="fjn-84-sct" id="EKD-eP-MPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
