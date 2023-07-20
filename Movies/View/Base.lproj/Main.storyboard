@@ -8,11 +8,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fjn-84-sct">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fjn-84-sct" customClass="CollectionView">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -23,7 +23,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dataCell" id="vmn-CT-HLb">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dataCell" id="vmn-CT-HLb" customClass="MovieCollectionViewCell" customModule="Movies" customModuleProvider="target">
                                 <rect key="frame" x="1.6666666666666667" y="0.0" width="390" height="800"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bsi-Xg-mGs">
@@ -245,13 +245,24 @@
                                         <constraint firstAttribute="bottom" secondItem="zGl-rH-5Sz" secondAttribute="bottom" constant="35" id="zAP-jF-yVC"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="castLabel" destination="fjn-84-sct" id="7Wf-I2-hbb"/>
+                                    <outlet property="directorLabel" destination="fjn-84-sct" id="5jr-pH-4Q9"/>
+                                    <outlet property="languageLabel" destination="VCl-uP-XUm" id="0UI-Ut-GJ7"/>
+                                    <outlet property="movieImage" destination="My2-DE-AMd" id="quK-0l-spa"/>
+                                    <outlet property="ratingLabel" destination="8r3-zH-btA" id="vaZ-rH-jUh"/>
+                                    <outlet property="runtimeLabel" destination="SLc-H4-5up" id="4gH-B4-tN7"/>
+                                    <outlet property="searchTextField" destination="7dG-jM-Rsu" id="7tY-gq-Zbl"/>
+                                    <outlet property="titleLabel" destination="1hj-V2-lO3" id="qzF-lo-Lu0"/>
+                                    <outlet property="yearLabel" destination="4iO-6Q-TMj" id="kWz-ZL-nCi"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                     </collectionView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="190" y="3"/>
         </scene>
     </scenes>
     <resources>
