@@ -8,10 +8,17 @@
 import UIKit
 
 class MovieViewController: UIViewController {
-
+    var data = [MovieModel]()
+    
+    @IBOutlet var MovieCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        MovieCollectionView.reloadData()
         fetchMovie(URL: "https://www.omdbapi.com/?i=tt3896198&apikey=e5dcc291") {result in
+            self.data = result
+            DispatchQueue.main.async {
+                self.MovieCollectionView.reloadData()
+            }
             print(result)
         }
         
@@ -38,3 +45,29 @@ class MovieViewController: UIViewController {
     }
 
 }
+// MARK: - UICollectionViewDataSource
+extension MovieViewController: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = MovieCollectionView.dequeueReusableCell(withReuseIdentifier: "dataCell", for: indexPath) as! MovieCollectionViewCell
+//        let apiData: MovieModel?
+//        apiData = data[indexPath.row]
+//        let string = "https://www.omdbapi.com" + (apiData!.Poster)
+//        _ = URL(string: string)
+//
+        return cell
+        
+    }
+}
+
+//extension MovieViewController:UICollectionViewDelegateFlowLayout
+//{
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 200, height: 300)// determines the no of cells according to devices
+//    }
+    
+//}

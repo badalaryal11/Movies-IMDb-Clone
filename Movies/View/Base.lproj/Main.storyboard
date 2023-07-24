@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="MovieCollectionViewController" id="BYZ-38-t0r" customClass="MovieViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fjn-84-sct" customClass="CollectionView">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fjn-84-sct">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -260,9 +260,13 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="3Np-Du-uYT"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="yee-KB-eTd"/>
+                        </connections>
                     </collectionView>
                     <connections>
-                        <outlet property="MovieCollectionView" destination="fjn-84-sct" id="Aq4-lG-r6N"/>
+                        <outlet property="MovieCollectionView" destination="fjn-84-sct" id="P8q-Hp-ZCn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
