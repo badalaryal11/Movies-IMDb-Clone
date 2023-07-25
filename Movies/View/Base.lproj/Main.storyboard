@@ -250,6 +250,7 @@
                                 <size key="customSize" width="393" height="800"/>
                                 <connections>
                                     <outlet property="movieCast" destination="7BE-mB-YlL" id="Sok-EV-WPq"/>
+                                    <outlet property="movieDirector" destination="J0h-2V-hkl" id="Qd7-d6-S8U"/>
                                     <outlet property="movieImageView" destination="My2-DE-AMd" id="Z5v-Ag-giQ"/>
                                     <outlet property="movieLanguage" destination="p9l-De-cD7" id="qcW-Jw-9bN"/>
                                     <outlet property="movieRating" destination="8r3-zH-btA" id="pN9-Hc-gQk"/>

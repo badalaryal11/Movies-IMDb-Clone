@@ -1,4 +1,3 @@
-//
 //  MovieViewController.swift
 //  Movies
 //
@@ -8,47 +7,28 @@
 import UIKit
 
 class MovieViewController: UIViewController {
-    var data = [MovieModel]()
     
+    
+   
+    
+
     @IBOutlet var MovieCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "IMdb"
         MovieCollectionView.reloadData()
-        fetchMovie(URL: "https://www.omdbapi.com/?i=tt3896198&apikey=e5dcc291") {result in
-            self.data = result
-            DispatchQueue.main.async {
-                self.MovieCollectionView.reloadData()
-            }
-            print(result)
+        
         }
-        
-    }
-    func fetchMovie(URL Url: String, completion: @escaping ([MovieModel]) -> Void)
-    {
-        guard let url = URL (string: Url) else { return  }
-        let session = URLSession.shared
-        
-        let dataTask = session.dataTask(with: url) {data,response,error in
-            do{
-                let fetchMovie = try JSONDecoder().decode([MovieModel].self, from: data!)
-                completion(fetchMovie)
-            } catch{
-                print("Parsing Error")
-                
-            }
+       
             
         }
-        dataTask.resume()
         
-        
-        
-    }
-
-}
+    
+   
 // MARK: - UICollectionViewDataSource
 extension MovieViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 11
     }
     
     
@@ -64,10 +44,4 @@ extension MovieViewController: UICollectionViewDataSource{
     }
 }
 
-//extension MovieViewController:UICollectionViewDelegateFlowLayout
-//{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 200, height: 300)// determines the no of cells according to devices
-//    }
-    
-//}
+
