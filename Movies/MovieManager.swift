@@ -8,7 +8,6 @@
 import Foundation
 
 
-import CoreLocation
 
 
 protocol WeatherManagerDelegate{
@@ -64,7 +63,7 @@ struct MovieManager{
         let decoder = JSONDecoder()
         do{
             let decodedData = try decoder.decode(MovieData.self,from: movieData)
-            let movie = MovieCollectionViewCell()
+            let movie = MovieCollectionViewCell( MovieData(Title: "", Year: "", Director: "", Actors: "", Language: "", Runtime: ""))
             return movie
         } catch{
             delegate?.didFailWithError(error: error)
