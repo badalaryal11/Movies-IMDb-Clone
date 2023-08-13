@@ -249,15 +249,15 @@
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <size key="customSize" width="393" height="800"/>
                                 <connections>
-                                    <outlet property="movieCast" destination="7BE-mB-YlL" id="Sok-EV-WPq"/>
-                                    <outlet property="movieDirector" destination="J0h-2V-hkl" id="Qd7-d6-S8U"/>
-                                    <outlet property="movieImageView" destination="My2-DE-AMd" id="Z5v-Ag-giQ"/>
-                                    <outlet property="movieLanguage" destination="p9l-De-cD7" id="qcW-Jw-9bN"/>
-                                    <outlet property="movieRating" destination="8r3-zH-btA" id="pN9-Hc-gQk"/>
-                                    <outlet property="movieRuntime" destination="9r5-5N-lJA" id="dty-UL-iHu"/>
-                                    <outlet property="movieTitle" destination="1hj-V2-lO3" id="CES-l9-G5n"/>
-                                    <outlet property="movieYear" destination="4iO-6Q-TMj" id="ur8-Xj-82k"/>
-                                    <outlet property="searchTextField" destination="7dG-jM-Rsu" id="Abl-UX-Lob"/>
+                                    <outlet property="LanguageLbl" destination="p9l-De-cD7" id="cqP-Kr-yY9"/>
+                                    <outlet property="castLbl" destination="7BE-mB-YlL" id="Gh5-b8-L1e"/>
+                                    <outlet property="directorLbl" destination="J0h-2V-hkl" id="e6x-WM-iDI"/>
+                                    <outlet property="imdbRating" destination="8r3-zH-btA" id="kGt-Uc-RvE"/>
+                                    <outlet property="movieImageView" destination="My2-DE-AMd" id="Ye2-em-obw"/>
+                                    <outlet property="movieTitle" destination="1hj-V2-lO3" id="koO-Hi-g18"/>
+                                    <outlet property="runtimeLbl" destination="9r5-5N-lJA" id="U7I-1k-vwQ"/>
+                                    <outlet property="searchTextBox" destination="7dG-jM-Rsu" id="qRt-OM-MaF"/>
+                                    <outlet property="yearLbl" destination="Gf9-dZ-kTg" id="4zv-j6-StY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -272,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1517" y="-289"/>
+            <point key="canvasLocation" x="-1509" y="-458"/>
         </scene>
     </scenes>
     <resources>
